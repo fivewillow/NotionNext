@@ -14,10 +14,11 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "VERCEL_ENV=production next build",
+    "start": "next start -p 3300",
     "post-build": "next-sitemap --config next-sitemap.config.js",
-    "export": "next build && next-sitemap --config next-sitemap.config.js && next export",
+    "export2": "next build && next-sitemap --config next-sitemap.config.js && next export",
+    "export":"next build && next export",
     "bundle-report": "ANALYZE=true yarn build"
   },
   "dependencies": {
