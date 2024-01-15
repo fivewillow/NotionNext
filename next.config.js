@@ -31,6 +31,8 @@ function scanSubdirectories(directory) {
 const themes = scanSubdirectories(path.resolve(__dirname, 'themes'))
 module.exports = withBundleAnalyzer({
   images: {
+    loader: 'akamai',
+    path: '',
     // 图片压缩
     formats: ['image/avif', 'image/webp'],
     // 允许next/image加载的图片 域名
@@ -42,7 +44,8 @@ module.exports = withBundleAnalyzer({
       'source.unsplash.com',
       'p1.qhimg.com',
       'webmention.io'
-    ]
+    ],
+    unoptimized: true
   },
   // 默认将feed重定向至 /public/rss/feed.xml
   async redirects() {
@@ -103,7 +106,12 @@ module.exports = withBundleAnalyzer({
     // 导出时 忽略/pages/sitemap.xml.js ， 否则报错getServerSideProps
     const pages = { ...defaultPathMap }
     delete pages['/sitemap.xml']
-    return pages
+    return {
+      '/': { page: '/' },
+      '/archive': { page: 'archive' },
+      '/article/[slug]': { page: '/[prefix]/[slug]' }
+      // '/[slug]': { page: '/[prefix]/[slug]' }
+    }
   },
   publicRuntimeConfig: { // 这里的配置既可以服务端获取到，也可以在浏览器端获取到
     NODE_ENV_API: process.env.NODE_ENV_API || 'prod',
