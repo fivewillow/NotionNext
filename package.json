@@ -13,9 +13,9 @@
         "url": "http://tangly1024.com"
     },
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev -p 3300",
         "build": "next build",
-        "start": "next start",
+        "start": "next start -p 3300",
         "post-build": "next-sitemap --config next-sitemap.config.js",
         "export": "next build && next-sitemap --config next-sitemap.config.js && next export",
         "bundle-report": "ANALYZE=true yarn build"
