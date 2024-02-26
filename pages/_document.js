@@ -26,6 +26,9 @@ class MyDocument extends Document {
                       return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
                     }
                   })}
+
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4104095935462010"
+            crossorigin="anonymous"></script>
                 </Head>
 
                 <body>
