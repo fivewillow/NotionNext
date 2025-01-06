@@ -11,34 +11,26 @@ module.exports = {
   FONT_URL: [
     // 'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
     'https://fonts.googleapis.com/css?family=Bitter&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
+    'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap',
+    'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-    // '"LXGW WenKai"',
-    '"PingFang SC"',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
+    '"Noto Sans TC"',
+    '"Source Han Sans TC"',
+    'Helvetica',
+    'Arial',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
-    '"Noto Sans SC"',
     'HarmonyOS_Regular',
     '"Helvetica Neue"',
-    'Helvetica',
-    '"Source Han Sans SC"',
-    'Arial',
     'sans-serif',
     '"Apple Color Emoji"'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
-    // '"LXGW WenKai"',
-    'Bitter',
-    '"Noto Serif SC"',
+    '"Noto Serif TC"',
     'SimSun',
     '"Times New Roman"',
     'Times',
